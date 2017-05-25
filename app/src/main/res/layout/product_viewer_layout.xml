@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/recommenderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            style="@style/tradrBtnStyle"
+            android:background="@drawable/tradr_button_press"
+            android:id="@+id/prepareRecButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Recommender System"
+            android:onClick="onPrepareRecommendationClick"/>
+        <Button
+            style="@style/tradrBtnStyle"
+            android:background="@drawable/tradr_button_press"
+            android:enabled="false"
+            android:id="@+id/getRecButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Prepare My Recommendated Products"
+            android:onClick="onGetRecommendation"/>
+        <Button
+            style="@style/tradrBtnStyle"
+            android:enabled="false"
+            android:id="@+id/getRecProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get A Recommended Product"
+            android:onClick="getRecProductClick"/>
+        <ImageView
+            android:paddingTop="15dp"
+            android:id="@+id/recImg"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.lorentzos.flingswipe.SwipeFlingAdapterView
+        android:layout_gravity="center"
+        android:id="@+id/cardHolder"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:rotation_degrees="16"
+        app:max_visible="4"
+        app:min_adapter_stack="6" />
+
+
+</LinearLayout>
